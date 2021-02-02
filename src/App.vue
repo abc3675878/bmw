@@ -44,17 +44,48 @@
           <!-- <template #icon>
             <i class="bx bx-home"></i>
           </template> -->
-          <router-link to="/">HOME</router-link>
+          <router-link to="/"
+            ><button
+              @click="openLoading"
+              style="width:100%;height:100%;text-align:left;background:transparent;font-weight:700;"
+            >
+              HOME
+            </button></router-link
+          >
         </vs-sidebar-item>
 
         <vs-sidebar-item id="kith">
-          <router-link to="/kith">M4 COMPETITION X KITH</router-link>
+          <router-link to="/kith">
+            <button
+              @click="openLoading"
+              style="width:100%;height:100%;text-align:left;background:transparent;font-weight:700;"
+            >
+              M4 COMPETITION X KITH
+            </button>
+          </router-link>
         </vs-sidebar-item>
         <vs-sidebar-item id="M4">
-          <router-link to="/m4">THE ALL-NEW M4</router-link>
+          <router-link to="/m4"
+            ><button
+              @click="openLoading"
+              style="width:100%;height:100%;text-align:left;background:transparent;font-weight:700;"
+            >
+              THE ALL-NEW M4
+            </button></router-link
+          >
         </vs-sidebar-item>
-        <vs-sidebar-item id="M3">
+        <!-- <vs-sidebar-item id="M3">
           <router-link to="/m3">THE ALL-NEW M3</router-link>
+        </vs-sidebar-item> -->
+        <vs-sidebar-item id="M3">
+          <router-link to="/m3"
+            ><button
+              @click="openLoading"
+              style="width:100%;height:100%;text-align:left;background:transparent;font-weight:700;"
+            >
+              THE ALL-NEW M3
+            </button></router-link
+          >
         </vs-sidebar-item>
 
         <!-- Side bar Footer -->
@@ -98,6 +129,14 @@ export default {
     },
   },
   methods: {
+    openLoading() {
+      const loading = this.$vs.loading({
+        color: '#0066b1',
+      })
+      setTimeout(() => {
+        loading.close()
+      }, 2000)
+    },
     // logout() {
     //   this.axios
     //     .delete(process.env.VUE_APP_API + '/users/logout')
@@ -123,41 +162,39 @@ export default {
     // },
 
     heartbeat() {
-      this.axios
-        .get(process.env.VUE_APP_API + '/users/heartbeat')
-        .then((res) => {
-          // 若 vuex 是登入中
-          if (this.user.id.length > 0) {
-            // 但是後端沒登入
-            if (!res.data) {
-              this.$swal({
-                icon: 'error',
-                title: '錯誤',
-                text: '登入時效已過',
-              })
+      this.axios.get(process.env.VUE_APP_API + '/users/heartbeat').then((res) => {
+        // 若 vuex 是登入中
+        if (this.user.id.length > 0) {
+          // 但是後端沒登入
+          if (!res.data) {
+            this.$swal({
+              icon: 'error',
+              title: '錯誤',
+              text: '登入時效已過',
+            })
 
-              // 清除 vuex
-              this.$store.commit('logout')
+            // 清除 vuex
+            this.$store.commit('logout')
 
-              // 導回登入頁面
-              if (this.$route.path !== '/') {
-                this.$router.push('/')
-              }
+            // 導回登入頁面
+            if (this.$route.path !== '/') {
+              this.$router.push('/')
             }
           }
-        })
-        .catch((error) => {
-          this.$swal({
-            icon: 'error',
-            title: '錯誤',
-            text: '發生錯誤',
-          })
-          this.$store.commit('logout')
-          // 導回登入頁面
-          if (this.$route.path !== '/') {
-            this.$router.push('/')
-          }
-        })
+        }
+      })
+      // .catch((error) => {
+      //   this.$swal({
+      //     icon: 'error',
+      //     title: '錯誤',
+      //     text: '發生錯誤',
+      //   })
+      //   this.$store.commit('logout')
+      //   // 導回登入頁面
+      //   if (this.$route.path !== '/') {
+      //     this.$router.push('/')
+      //   }
+      // })
     },
   },
 

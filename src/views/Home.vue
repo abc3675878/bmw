@@ -9,8 +9,8 @@
               <p>預約試駕</p>
             </div>
             <div class="btn">
-              <router-link to="/kith"><button>更多詳情</button></router-link>
-              <router-link to="/checkout"><button class="orderBtn">立即訂購</button></router-link>
+              <router-link to="/kith"><button @click="openLoading">更多詳情</button></router-link>
+              <router-link to="/checkout"><button class="orderBtn" @click="openLoading">立即訂購</button></router-link>
             </div>
           </div>
         </div>
@@ -23,8 +23,8 @@
               <p>預約試駕</p>
             </div>
             <div class="btn">
-              <button>更多詳情</button>
-              <button class="orderBtn">立即訂購</button>
+              <button @click="openLoading">更多詳情</button>
+              <button class="orderBtn" @click="openLoading">立即訂購</button>
             </div>
           </div>
         </div>
@@ -38,8 +38,8 @@
               <p>預約試駕</p>
             </div>
             <div class="btn">
-              <button>更多詳情</button>
-              <button class="orderBtn">立即訂購</button>
+              <button @click="openLoading">更多詳情</button>
+              <button class="orderBtn" @click="openLoading">立即訂購</button>
             </div>
           </div>
         </div>
@@ -47,6 +47,22 @@
     </full-page>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'home',
+  methods: {
+    openLoading() {
+      const loading = this.$vs.loading({
+        color: '#0066b1',
+      })
+      setTimeout(() => {
+        loading.close()
+      }, 3000)
+    },
+  },
+}
+</script>
 
 <style lang="scss" scoped>
 html,

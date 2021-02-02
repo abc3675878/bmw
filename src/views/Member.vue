@@ -35,7 +35,7 @@
                   <p>243</p>
                   <p>新北市 泰山區</p>
                   <p>貴子里</p>
-                  <p>致遠新村55之1號</p>
+                  <p>致遠新村55號</p>
                 </div>
                 <div class="address_edit">
                   <a href="">Edit</a>
@@ -58,8 +58,82 @@
           </div>
         </div>
       </div>
-      <div class="wrap"></div>
-      <div class="wrap"></div>
+      <div class="wrap">
+        <div class="wrap_top2">
+          <div class="wrap_top_title2">
+            訂單
+            <hr align="left" />
+          </div>
+        </div>
+        <div class="wrap2_bottom">
+          <h6>您總共有 3 筆訂單</h6>
+          <div class="order">
+            <div class="ordernumber">#7913</div>
+            <div class="ordername">BMW M4 COMPETITION X KITH</div>
+            <div class="orderview">VIEW</div>
+          </div>
+          <div class="order">
+            <div class="ordernumber">#5131</div>
+            <div class="ordername">BMW M4 COUPE COMPETITION</div>
+            <div class="orderview">VIEW</div>
+          </div>
+          <div class="order">
+            <div class="ordernumber">#1331</div>
+            <div class="ordername">BMW M3 COUPE COMPETITION</div>
+            <div class="orderview">VIEW</div>
+          </div>
+          <div class="order order_grey"></div>
+          <div class="order order_grey"></div>
+        </div>
+      </div>
+      <div class="wrap">
+        <div class="wrap_top2">
+          <div class="wrap_top_title2">
+            預約中心
+            <hr align="left" />
+          </div>
+        </div>
+        <div class="wrap_center">
+          <div class="car_center car">
+            <h6>已預約賞車</h6>
+            <div class="small_box">
+              <div class="box">
+                <p>2020年<br />2月31號<br />13:00</p>
+                <h2>台北濱江</h2>
+                <img src="../assets/logos/bmw car icon.png" alt="" />
+              </div>
+              <div class="box">
+                <p>2020年<br />3月18號<br />12:00</p>
+                <h2>台北內湖</h2>
+                <img src="../assets/logos/bmw car icon.png" alt="" />
+              </div>
+              <div class="box">
+                <p>2020年<br />5月1號<br />19:00</p>
+                <h2>台北新莊</h2>
+                <img src="../assets/logos/bmw car icon.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="car_care car">
+            <h6>已排程保養</h6>
+            <div class="small_box">
+              <div class="box">
+                <p>2020年<br />2月31號<br />15:00</p>
+                <h2>濱江服務中心</h2>
+                <img src="../assets/logos/bmw car icon.png" alt="" />
+              </div>
+              <div class="box">
+                <p>2020年<br />6月18號<br />12:00</p>
+                <h2>內湖服務中心</h2>
+                <img src="../assets/logos/bmw car icon.png" alt="" />
+              </div>
+              <div class="box">
+                <img class="warning" src="../assets/logos/warning.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <!-- <button @click="logout">登出</button> -->
     </div>
@@ -139,11 +213,20 @@ header {
   height: 20%;
   // margin-top: 80px;
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
   color: #0066b1;
   font-size: 40px;
   font-weight: 700;
+
+  button {
+    width: 50px;
+    background-color: transparent;
+    color: #0066b1;
+    text-decoration: underline;
+    font-size: 12px;
+  }
 }
 
 .container {
@@ -366,6 +449,156 @@ header {
             }
           }
         }
+      }
+    }
+  }
+}
+
+//! 訂單區塊
+//! 訂單區塊
+//! 訂單區塊
+//! 訂單區塊
+//! 訂單區塊
+//! 訂單區塊
+
+.wrap_top2 {
+  width: 100%;
+  height: 10%;
+
+  .wrap_top_title2 {
+    height: 100%;
+    color: #504343;
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: 2px;
+
+    hr {
+      width: 40px;
+      border: 1px solid;
+    }
+  }
+}
+
+.wrap2_bottom {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .order {
+    width: 100%;
+    height: 30px;
+    border-radius: 20px;
+    background-color: #fff;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .ordernumber {
+    font-weight: 700;
+    color: black;
+    margin-left: 5px;
+  }
+
+  .ordername {
+    color: #504343;
+  }
+
+  .orderview {
+    height: 100%;
+    border-radius: 20px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    color: #504343;
+    font-weight: 500;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.096);
+    cursor: pointer;
+  }
+
+  .order_grey {
+    background-color: #e9e9e9;
+  }
+}
+
+//! 保養區塊
+//! 保養區塊
+//! 保養區塊
+//! 保養區塊
+//! 保養區塊
+
+.wrap_center {
+  margin-top: 10%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.car {
+  height: 45%;
+  width: 100%;
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 10px;
+  h6 {
+    height: 15%;
+    color: #504343;
+    font-weight: 500;
+  }
+  .small_box {
+    height: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .box {
+      width: 30%;
+      height: 100%;
+      border-radius: 20px;
+      background-color: #f5f5f5;
+      cursor: pointer;
+      overflow: hidden;
+      position: relative;
+
+      p {
+        font-size: 12px;
+        color: #504343;
+        position: absolute;
+        left: 5px;
+        top: 5px;
+      }
+
+      h2 {
+        color: #0066b1;
+        height: 110%;
+        transform: translateY(-5%);
+        text-align: center;
+        font-size: 20px;
+        font-weight: 500;
+        position: absolute;
+        right: -3px;
+        writing-mode: vertical-lr;
+      }
+
+      img {
+        width: 48px;
+        position: absolute;
+        bottom: -10px;
+        left: -10px;
+      }
+
+      .warning {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 36px;
       }
     }
   }
