@@ -162,39 +162,41 @@ export default {
     // },
 
     heartbeat() {
-      this.axios.get(process.env.VUE_APP_API + '/users/heartbeat').then((res) => {
-        // 若 vuex 是登入中
-        if (this.user.id.length > 0) {
-          // 但是後端沒登入
-          if (!res.data) {
-            this.$swal({
-              icon: 'error',
-              title: '錯誤',
-              text: '登入時效已過',
-            })
+      this.axios
+        .get(process.env.VUE_APP_API + '/users/heartbeat')
+        .then((res) => {
+          // 若 vuex 是登入中
+          if (this.user.id.length > 0) {
+            // 但是後端沒登入
+            if (!res.data) {
+              this.$swal({
+                icon: 'error',
+                title: '錯誤',
+                text: '登入時效已過',
+              })
 
-            // 清除 vuex
-            this.$store.commit('logout')
+              // 清除 vuex
+              this.$store.commit('logout')
 
-            // 導回登入頁面
-            if (this.$route.path !== '/') {
-              this.$router.push('/')
+              // 導回登入頁面
+              if (this.$route.path !== '/') {
+                this.$router.push('/')
+              }
             }
           }
-        }
-      })
-      // .catch((error) => {
-      //   this.$swal({
-      //     icon: 'error',
-      //     title: '錯誤',
-      //     text: '發生錯誤',
-      //   })
-      //   this.$store.commit('logout')
-      //   // 導回登入頁面
-      //   if (this.$route.path !== '/') {
-      //     this.$router.push('/')
-      //   }
-      // })
+        })
+        .catch((error) => {
+          this.$swal({
+            icon: 'error',
+            title: '錯誤',
+            text: '發生錯誤',
+          })
+          this.$store.commit('logout')
+          // 導回登入頁面
+          if (this.$route.path !== '/') {
+            this.$router.push('/')
+          }
+        })
     },
   },
 
