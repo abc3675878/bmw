@@ -7,11 +7,11 @@ import VueAxios from 'vue-axios'
 // Reset css
 import './assets/styles/reset.css'
 // Full page js
-import './assets/js/vue-fullpage.min'
+// import './assets/js/vue-fullpage.min'
 // Full page
 // import 'fullpage.js/vendors/scrolloverflow'
 // import './fullpage.scrollHorizontally.min'
-import VueFullPage from 'vue-fullpage.js'
+// import VueFullPage from 'vue-fullpage.js'
 // Boxicons 套件
 import 'boxicons'
 // vuesax UI 套件
@@ -38,7 +38,7 @@ Vue.config.productionTip = false
 // 使用 axios 請求時順便傳認證資訊
 axios.defaults.withCredentials = true
 
-Vue.use(VueFullPage)
+// Vue.use(VueFullPage)
 Vue.use(VueAxios, axios)
 Vue.use(VueSweetalert2)
 Vue.use(Vuesax)
