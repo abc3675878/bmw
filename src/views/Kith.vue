@@ -260,6 +260,7 @@
   // border: 1px solid grey;
   position: relative;
   box-sizing: border-box;
+  // overflow: hidden;
 
   h1 {
     font-size: 58px;
@@ -268,18 +269,18 @@
 }
 
 .section {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-color: white;
 }
 
 .banner {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
 
   video {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     position: absolute;
     left: 0;
@@ -289,13 +290,13 @@
 }
 
 .img_01 {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   object-fit: cover;
 }
 
 .section01 {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -657,12 +658,12 @@
 }
 
 .section10 {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
 
   video {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     position: absolute;
     left: 0;
