@@ -295,9 +295,7 @@ header {
     top: -15px;
     left: -15px;
   }
-  &:hover {
-    // box-shadow: 0px 4px 5px 2px #e7222e;
-  }
+  
 
   .center {
     display: flex;
@@ -328,9 +326,7 @@ header {
       top: -15px;
       left: -15px;
     }
-    &:hover {
-      // box-shadow: 0px 4px 5px 2px #e7222e;
-    }
+    
 
     // .center {
     //   display: flex;
@@ -401,9 +397,7 @@ header {
       top: -15px;
       left: -15px;
     }
-    &:hover {
-      // box-shadow: 0px 4px 5px 2px #e7222e;
-    }
+    
 
     hr {
       background-color: #aaa;
@@ -441,9 +435,7 @@ header {
     background: rgba(255, 255, 255, 1);
     box-shadow: 0px 4px 5px 2px #0067b17e;
     transition: all 0.5s;
-    &:hover {
-      // box-shadow: 0px 4px 5px 2px #e7222e;
-    }
+    
     width: 100%;
     height: 510px;
   }

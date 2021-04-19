@@ -604,3 +604,4 @@ header {
   }
 }
 </style>
+<style lang="scss" scoped src="../assets/styles/rwd_member.scss">
