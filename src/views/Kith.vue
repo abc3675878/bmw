@@ -245,7 +245,9 @@
 
               <div class="btn">
                 <button>預約試駕</button>
-                <button class="orderBtn">立即訂購</button>
+                <button class="orderBtn" @click="openLoading">
+                  <router-link to="/Checkout">立即訂購</router-link>
+                </button>
               </div>
             </div>
           </div>
@@ -254,6 +256,22 @@
     </full-page>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'home',
+  methods: {
+    openLoading() {
+      const loading = this.$vs.loading({
+        color: '#0066b1',
+      })
+      setTimeout(() => {
+        loading.close()
+      }, 1000)
+    },
+  },
+}
+</script>
 
 <style lang="scss" scoped>
 * {

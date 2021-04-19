@@ -64,7 +64,7 @@
             </button>
           </router-link>
         </vs-sidebar-item>
-        <vs-sidebar-item id="M4">
+        <!-- <vs-sidebar-item id="M4">
           <router-link to="/m4"
             ><button
               @click="openLoading"
@@ -73,11 +73,11 @@
               THE ALL-NEW M4
             </button></router-link
           >
-        </vs-sidebar-item>
+        </vs-sidebar-item> -->
         <!-- <vs-sidebar-item id="M3">
           <router-link to="/m3">THE ALL-NEW M3</router-link>
         </vs-sidebar-item> -->
-        <vs-sidebar-item id="M3">
+        <!-- <vs-sidebar-item id="M3">
           <router-link to="/m3"
             ><button
               @click="openLoading"
@@ -86,7 +86,7 @@
               THE ALL-NEW M3
             </button></router-link
           >
-        </vs-sidebar-item>
+        </vs-sidebar-item> -->
 
         <!-- Side bar Footer -->
         <!-- Side bar Footer -->
@@ -135,7 +135,7 @@ export default {
       })
       setTimeout(() => {
         loading.close()
-      }, 2000)
+      }, 1000)
     },
     // logout() {
     //   this.axios

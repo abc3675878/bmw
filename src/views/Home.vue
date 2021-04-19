@@ -58,7 +58,7 @@ export default {
       })
       setTimeout(() => {
         loading.close()
-      }, 3000)
+      }, 2000)
     },
   },
 }

@@ -245,7 +245,7 @@ export default {
 // }
 #checkout {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   // background: rgb(250, 250, 250);
   padding: 0;
   margin: 0;
@@ -284,7 +284,7 @@ header {
 
 .wrap1 {
   position: relative;
-  border-radius: 35px;
+  border-radius: 15px;
   background: rgba(255, 255, 255, 1);
   box-shadow: 0px 4px 5px 2px #0067b17e;
   transition: all 0.5s;
@@ -296,7 +296,7 @@ header {
     left: -15px;
   }
   &:hover {
-    box-shadow: 0px 4px 5px 2px #e7222e;
+    // box-shadow: 0px 4px 5px 2px #e7222e;
   }
 
   .center {
@@ -315,7 +315,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 35px;
+    border-radius: 15px;
     background: rgba(255, 255, 255, 1);
     height: 280px;
     width: 100%;
@@ -329,7 +329,7 @@ header {
       left: -15px;
     }
     &:hover {
-      box-shadow: 0px 4px 5px 2px #e7222e;
+      // box-shadow: 0px 4px 5px 2px #e7222e;
     }
 
     // .center {
@@ -388,7 +388,7 @@ header {
     flex-direction: column;
     position: relative;
     margin-top: 80px;
-    border-radius: 35px;
+    border-radius: 15px;
     background: rgba(255, 255, 255, 1);
     height: 150px;
     width: 100%;
@@ -402,7 +402,7 @@ header {
       left: -15px;
     }
     &:hover {
-      box-shadow: 0px 4px 5px 2px #e7222e;
+      // box-shadow: 0px 4px 5px 2px #e7222e;
     }
 
     hr {
@@ -437,12 +437,12 @@ header {
     display: flex;
     flex-direction: column;
     padding: 10% 5% 3% 5%;
-    border-radius: 35px;
+    border-radius: 15px;
     background: rgba(255, 255, 255, 1);
     box-shadow: 0px 4px 5px 2px #0067b17e;
     transition: all 0.5s;
     &:hover {
-      box-shadow: 0px 4px 5px 2px #e7222e;
+      // box-shadow: 0px 4px 5px 2px #e7222e;
     }
     width: 100%;
     height: 510px;
@@ -608,4 +608,7 @@ header {
     }
   }
 }
+
+// @import url(../assets/styles/rwd_checkout.scss);
 </style>
+<style scoped lang="scss" src="../assets/styles/rwd_checkout.scss">
