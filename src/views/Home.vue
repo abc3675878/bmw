@@ -69,7 +69,8 @@ html,
 body {
   margin: 0;
   padding: 0;
-  width: 100vw;
+  width: 100%;
+  overflow: hidden;
 }
 
 h1 {
@@ -177,3 +178,4 @@ h1 {
   }
 }
 </style>
+<style lang="scss" scoped src="../assets/styles/red_home.scss">
